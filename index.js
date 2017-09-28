@@ -4,7 +4,6 @@ const render = require('render-media')
 const through2 = require('through2')
 // const IPFS = require('ipfs')
 
-
 class IPFSElement extends ZComponent {
   set src (value) {
     this.render(value)
@@ -41,8 +40,8 @@ class IPFSDirectory extends IPFSElement {
       let name = src + '/' + file.Name
       let createReadStream = opts => {
         if (!opts) opts = {}
-        let offset = opts.start
-        let count = opts.end - opts.start
+        // let offset = opts.start
+        // let count = opts.end - opts.start
         let stream = through2()
         ipfs.files.cat(name).then(_stream => {
           _stream.pipe(stream)
@@ -61,8 +60,8 @@ class IPFSFile extends IPFSElement {
     if (!name) throw new Error('Missing required name attribute.')
     let createReadStream = opts => {
       if (!opts) opts = {}
-      let offset = opts.start
-      let count = opts.end - opts.start
+      // let offset = opts.start
+      // let count = opts.end - opts.start
       // TODO: handle offsets
       let stream = through2()
       console.log(src)
