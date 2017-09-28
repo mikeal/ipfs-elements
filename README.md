@@ -1,5 +1,7 @@
 # IPFS Elements
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mikeal/ipfs-elements.svg)](https://greenkeeper.io/)
+
 HTML elements you can use to display content from IPFS.
 
 <p>
