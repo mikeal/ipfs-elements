@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IPFS TEST</title>
+    <style>
+      ipfs-dir iframe {
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="bundle.js"></script>
+    <h2>File</h2>
+    <ipfs-file
+    api="/ip4/127.0.0.1/tcp/5001"
+    name="test.txt"
+    src="QmVtMq1MRzi36hUSVseWQHVKbbzEKeoVjdwYhpWQ5cwV5u"
+    ></ipfs-file>
+
+    <h2>Text</h2>
+    <ipfs-txt
+    api="/ip4/127.0.0.1/tcp/5001"
+    src="QmVtMq1MRzi36hUSVseWQHVKbbzEKeoVjdwYhpWQ5cwV5u"
+    ></ipfs-txt>
+
+    <h2>Image</h2>
+    <ipfs-img
+    api="/ip4/127.0.0.1/tcp/5001"
+    src="/ipfs/QmW2WQi7j6c7UgJTarActp7tDNikE4B2qXtFCfLPdsgaTQ/cat.jpg"></ipfs-img>
+
+    <h2>Directory</h2>
+    <ipfs-dir
+      api="/ip4/127.0.0.1/tcp/5001"
+      src="/ipfs/QmYwAPJzv5CZsnA625s3Xf2nemtYgPpHdWEz79ojWnPbdG"
+    ></ipfs-dir>
+  </body>
+</html>

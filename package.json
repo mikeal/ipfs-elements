@@ -1,0 +1,39 @@
+{
+  "name": "ipfs-elements",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "commit": "git-cz",
+    "test": "standard",
+    "start": "budo dist.js:bundle.js",
+    "precommit": "npm test",
+    "prepush": "npm test",
+    "prepublish": "mkdir -p dist && browserify dist.js > dist/ipfs-elements.js && cat dist/ipfs-elements.js | minify > dist/ipfs-elements.min.js",
+    "commitmsg": "validate-commit-msg",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "standard": {
+    "ignore": [
+      "dist"
+    ]
+  },
+  "keywords": [],
+  "author": "Mikeal Rogers <mikeal.rogers@gmail.com> (http://www.mikealrogers.com)",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "babel-minify": "^0.2.0",
+    "browserify": "^14.4.0",
+    "budo": "^10.0.4",
+    "husky": "^0.14.3",
+    "load-js": "^2.0.0",
+    "standard": "^10.0.3",
+    "semantic-release": "^8.0.3"
+  },
+  "dependencies": {
+    "ipfs-api": "^14.3.5",
+    "render-media": "^2.10.0",
+    "through2": "^2.0.3",
+    "zcomponent": "^1.0.4"
+  }
+}
